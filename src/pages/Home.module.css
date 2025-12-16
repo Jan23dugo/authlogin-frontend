@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center; 
+  height: 100%;            /* use 100% instead of 100vh to avoid scrollbar issues */
+  width: 100%;             /* use 100% instead of 100vw to avoid scrollbar issues */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}

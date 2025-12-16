@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import Box from "../components/Box/Box";
+import styles from "./Home.module.css"; // import module
 
 function Home() {
   const navigate = useNavigate();
@@ -8,9 +10,13 @@ function Home() {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h1>Welcome to My App</h1>
-      <button onClick={goToLogin}>Go to Login</button>
+    <div className={styles.container}>
+      <Box
+        title="Full Authentication System (Advanced Auth App)"
+        description="Access your account here."
+        buttonText="Login"
+        buttonProps={{ onClick: goToLogin, variant: "primary", size: "md" }}
+      />
     </div>
   );
 }

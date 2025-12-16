@@ -1,0 +1,22 @@
+.box {
+  width: 500px; /* larger width */
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #ffffff; /* box is white */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.box-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.box-description {
+  font-size: 18px;
+  color: #4b5563;
+}

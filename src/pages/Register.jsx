@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { registerUser } from "../services/api";
+import Input from "../components/Input/Input";
+import Button from "../components/Button/Button";
+import FormError from "../components/FormError/FormError";
+import styles from "./Register.module.css";
 
 function Register() {
   const navigate = useNavigate();
@@ -34,47 +38,47 @@ function Register() {
   };
 
   return (
-    <div>
+    <div className={styles.register}>
       <h1>Register</h1>
 
-      {error && <p style={{ color: "red", marginBottom: "10px" }}>{error}</p>}
+      <FormError message={error} />
       <form onSubmit={handleRegister}>
-        <input
+        <Input
           type="text"
           name="firstName"
           placeholder="First Name"
           value={formData.firstName}
           onChange={handleChange}
         />
-        <input
+        <Input
           type="text"
           name="middleName"
           placeholder="Middle Name"
           value={formData.middleName}
           onChange={handleChange}
         />
-        <input
+        <Input
           type="text"
           name="lastName"
           placeholder="Last Name"
           value={formData.lastName}
           onChange={handleChange}
         />
-        <input
+        <Input
           type="email"
           name="email"
           placeholder="Email"
           value={formData.email}
           onChange={handleChange}
         />
-        <input
+        <Input
           type="password"
           name="password"
           placeholder="Password"
           value={formData.password}
           onChange={handleChange}
         />
-        <input
+        <Input
           type="password"
           name="confirmPassword"
           placeholder="Confirm Password"
@@ -82,8 +86,18 @@ function Register() {
           onChange={handleChange}
         />
 
-        <button type="submit">Register</button>
+        <Button type="submit">Register</Button>
       </form>
+
+      <p style={{ marginTop: "10px" }}>
+        Already have an account?{" "}
+        <span
+          style={{ color: "blue", cursor: "pointer" }}
+          onClick={() => navigate("/login")}
+        >
+          Login
+        </span>
+      </p>
     </div>
   );
 }

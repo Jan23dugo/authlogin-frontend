@@ -20,4 +20,9 @@ export const registerUser = async (data) => {
   return API.post("/register", data);
 };
 
+// Email verification service
+export const verifyEmail = async (token) => {
+  return API.post("/verify-email", { token });
+};
+
 export default API;

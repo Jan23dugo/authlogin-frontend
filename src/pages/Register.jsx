@@ -31,7 +31,7 @@ function Register() {
     try {
       const response = await registerUser(formData);
       console.log(response.data);
-      navigate("/login");
+      navigate("/login?registered=true");
     } catch (err) {
       setError(err.response?.data?.message || "Registration Failed");
     }

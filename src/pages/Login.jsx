@@ -6,8 +6,10 @@ import Input from "../components/Input/Input";
 import FormError from "../components/FormError/FormError";
 import FormSuccess from "../components/FormSuccess/FormSuccess";
 import styles from "./Login.module.css";
+import AuthSwitchText from "../components/AuthSwitchText/AuthSwitchText";
+import AuthLink from "../components/AuthLink/AuthLink";
 
-function Login() {
+const Login = () => {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const hasProcessedParams = useRef(false);
@@ -23,21 +25,23 @@ function Login() {
   // Check for verification success, registration, or error from URL params
   useEffect(() => {
     if (hasProcessedParams.current) return;
-    
+
     const verified = searchParams.get("verified");
     const registered = searchParams.get("registered");
     const errorParam = searchParams.get("error");
 
     if (verified === "true" || registered === "true" || errorParam) {
       hasProcessedParams.current = true;
-      
+
       // Use startTransition to mark state updates as non-urgent and avoid cascading renders
       startTransition(() => {
         if (verified === "true") {
           setSuccess("Email verified successfully! You can now log in.");
         }
         if (registered === "true") {
-          setSuccess("Registration successful! Please check your email to verify your account before logging in.");
+          setSuccess(
+            "Registration successful! Please check your email to verify your account before logging in."
+          );
         }
         if (errorParam) {
           setError(decodeURIComponent(errorParam));
@@ -67,6 +71,8 @@ function Login() {
 
       // Save token to local storage
       localStorage.setItem("token", response.data.token);
+
+      localStorage.setItem("user", JSON.stringify(response.data.user));
 
       // Redirect user
       navigate("/dashboard");
@@ -105,17 +111,17 @@ function Login() {
         <Button type="submit">Login</Button>
       </form>
 
-      <p style={{ marginTop: "10px" }}>
-        Don’t have an account?{" "}
-        <span
-          style={{ color: "blue", cursor: "pointer" }}
-          onClick={() => navigate("/register")}
-        >
-          Register
-        </span>
-      </p>
+      <AuthLink to="/forgot-password" align="right">
+        Forgot Password?
+      </AuthLink>
+
+      <AuthSwitchText
+        text="Don't have an account?"
+        linkText="Register"
+        to="/register"
+      />
     </div>
   );
-}
+};
 
 export default Login;

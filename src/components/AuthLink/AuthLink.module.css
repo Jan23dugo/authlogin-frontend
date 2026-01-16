@@ -1,0 +1,29 @@
+.wrapper { 
+    margin-top: 10px;
+}
+
+.left { 
+    text-align: left;
+}
+
+.right { 
+    text-align: right;
+
+}
+
+.center { 
+    text-align: center;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: #1a73e8;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import Box from "../components/Box/Box";
 import styles from "./Home.module.css"; // import module
 
-function Home() {
+const Home = () => {
   const navigate = useNavigate();
 
   const goToLogin = () => {
@@ -19,6 +19,6 @@ function Home() {
       />
     </div>
   );
-}
+};
 
 export default Home;

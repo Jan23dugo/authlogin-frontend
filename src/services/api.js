@@ -25,4 +25,12 @@ export const verifyEmail = async (token) => {
   return API.post("/verify-email", { token });
 };
 
+export const forgotPassword = async (email) => {
+  return API.post("/forgot-password", { email });
+};
+
+export const resetPassword = async (token, password, confirmPassword) => {
+  return API.put(`/reset-password/${token}`, { password, confirmPassword });
+};
+
 export default API;

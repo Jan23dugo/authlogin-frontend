@@ -5,8 +5,9 @@ import Input from "../components/Input/Input";
 import Button from "../components/Button/Button";
 import FormError from "../components/FormError/FormError";
 import styles from "./Register.module.css";
+import AuthSwitchText from "../components/AuthSwitchText/AuthSwitchText";
 
-function Register() {
+const Register = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
@@ -89,17 +90,13 @@ function Register() {
         <Button type="submit">Register</Button>
       </form>
 
-      <p style={{ marginTop: "10px" }}>
-        Already have an account?{" "}
-        <span
-          style={{ color: "blue", cursor: "pointer" }}
-          onClick={() => navigate("/login")}
-        >
-          Login
-        </span>
-      </p>
+      <AuthSwitchText
+        text="Already have an account?"
+        linkText="Login"
+        to="/login"
+      />
     </div>
   );
-}
+};
 
 export default Register;

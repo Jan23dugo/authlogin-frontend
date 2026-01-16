@@ -1,7 +1,7 @@
 import styles from "./Box.module.css";
 import Button from "../Button/Button";
 
-function Box({ title, description, buttonText, buttonProps }) {
+const Box = ({ title, description, buttonText, buttonProps }) => {
   return (
     <div className={styles.box}>
       <h2 className={styles.box - title}>{title}</h2>
@@ -9,6 +9,6 @@ function Box({ title, description, buttonText, buttonProps }) {
       <Button {...buttonProps}>{buttonText}</Button>
     </div>
   );
-}
+};
 
 export default Box;

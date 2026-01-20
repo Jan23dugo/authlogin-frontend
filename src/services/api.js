@@ -33,4 +33,8 @@ export const resetPassword = async (token, password, confirmPassword) => {
   return API.put(`/reset-password/${token}`, { password, confirmPassword });
 };
 
+export const setup2FA = () => API.post("/2fa/setup");
+export const verify2FA = (token) => API.post("/2fa/verify", { token });
+export const disable2FA = () => API.post("/2fa/disable");
+
 export default API;

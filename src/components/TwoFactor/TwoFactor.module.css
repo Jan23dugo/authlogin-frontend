@@ -1,0 +1,56 @@
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #eee;
+}
+
+.container h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.badge {
+  color: green;
+  margin-bottom: 10px;
+}
+
+.qr {
+  display: block;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.setupBox {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.verifyRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.message {
+  margin-top: 10px;
+  font-weight: 500;
+  color: #007bff;
+}
+
+.cancelLink {
+  background: none;
+  border: none;
+  color: #666;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}

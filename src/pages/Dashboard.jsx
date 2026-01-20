@@ -2,18 +2,39 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button/Button";
 import styles from "./Dashboard.module.css";
+import TwoFactor from "../components/TwoFactor/TwoFactor";
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const [user] = useState(() => {
+
+  const [user, setUser] = useState(() => {
     const storedUser = localStorage.getItem("user");
-    return storedUser ? JSON.parse(storedUser) : null;
+    try {
+      if (storedUser && storedUser !== "undefined") {
+        return JSON.parse(storedUser);
+      }
+      return null;
+    } catch (error) {
+      console.error("Error parsing user data:", error);
+      // If data is corrupt, return null so the app doesn't crash
+      return null;
+    }
   });
 
   useEffect(() => {
     const token = localStorage.getItem("token");
+    const storedUser = localStorage.getItem("user");
 
-    if (!token) {
+    // Check if token is missing OR if it is the string "undefined"
+    if (
+      !token ||
+      token === "undefined" ||
+      !storedUser ||
+      storedUser === "undefined"
+    ) {
+      // Clear the bad data automatically
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
       navigate("/login");
     }
   }, [navigate]);
@@ -43,10 +64,8 @@ const Dashboard = () => {
 
           <div className={styles.divider}></div>
 
-          <p>
-            This is your protected dashboard. You can only see this page if you
-            are logged in.
-          </p>
+          <div className={styles.divider}></div>
+          <TwoFactor user={user} setUser={setUser} />
         </div>
       </main>
     </div>

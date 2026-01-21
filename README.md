@@ -18,6 +18,7 @@ The frontend user interface for the Advanced Authentication System. It features 
 * Smart Redirects: Redirects unauthenticated users to login automatically.
 
 ## Screenshots
+![Home Page](./screenshots/Homepage.png).
 
 ![Login Page](./screenshots/login.png)
 *Secure Login Screen*

@@ -1,16 +1,38 @@
-# React + Vite
+### 2. Frontend Repository README
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Focus:** Visuals, screenshots, and how to connect to the backend.
 
-Currently, two official plugins are available:
+```markdown
+# Advanced Auth System - Client 💻
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![React](https://img.shields.io/badge/React-v18-blue)
+![Tailwind](https://img.shields.io/badge/Style-CSS-orange)
 
-## React Compiler
+The frontend user interface for the Advanced Authentication System. It features a responsive design, protected routes, and an interactive 2FA setup wizard.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 **Backend Repository:** [Link to your Backend Repo goes here]
 
-## Expanding the ESLint configuration
+## ✨ Features
+* **User Dashboard:** Protected views accessible only after login.
+* **2FA Setup:** Visual QR Code scanning integration.
+* **Role Management:** Admin vs. User view rendering.
+* **Smart Redirects:** Redirects unauthenticated users to login automatically.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📸 Screenshots
+
+![Login Page](./screenshots/login.png)
+*Secure Login Screen*
+
+![2FA Setup](./screenshots/2fa.png)
+*Two-Factor Authentication Setup*
+
+## 🚀 Getting Started
+
+### Prerequisites
+* Ensure the **Backend API** is running locally on port 5000 (or your configured port).
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/yourusername/auth-frontend.git](https://github.com/yourusername/auth-frontend.git)

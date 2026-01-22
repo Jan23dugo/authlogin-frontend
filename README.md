@@ -2,7 +2,7 @@
 
 **Focus:** Visuals, screenshots, and how to connect to the backend.
 
-# Advanced Auth System - Client 
+# Advanced Auth System - Client
 
 ![React](https://img.shields.io/badge/React-v18-blue)
 ![Tailwind](https://img.shields.io/badge/Style-CSS-orange)
@@ -12,27 +12,37 @@ The frontend user interface for the Advanced Authentication System. It features 
 🔗 Backend Repository: [Link to your Backend Repo goes here]
 
 ## Features
-* User Dashboard: Protected views accessible only after login.
-* 2FA Setup: Visual QR Code scanning integration.
-* Role Management: Admin vs. User view rendering.
-* Smart Redirects: Redirects unauthenticated users to login automatically.
+
+- User Dashboard: Protected views accessible only after login.
+- 2FA Setup: Visual QR Code scanning integration.
+- Role Management: Admin vs. User view rendering.
+- Smart Redirects: Redirects unauthenticated users to login automatically.
 
 ## Screenshots
+
 ![Home Page](./screenshots/Homepage.png).
 
-![Login Page](./screenshots/login.png)
-*Secure Login Screen*
+![Login Page](./screenshots/Login.png)
+_Secure Login Screen_
 
-![2FA Setup](./screenshots/2fa.png)
-*Two-Factor Authentication Setup*
+![Register page](./screenshots/Register.png)
+
+![Forgot Password page](./screenshots/ForgotPassword.png)
+
+![Dashboard page](./screenshots/Dashboard.png)
+
+![2FA Setup](./screenshots/Enable2fa.png)
+_Two-Factor Authentication Setup_
 
 ## Getting Started
 
 ### Prerequisites
-* Ensure the **Backend API** is running locally on port 5000 (or your configured port).
+
+- Ensure the **Backend API** is running locally on port 5000 (or your configured port).
 
 ### Installation
 
 1. **Clone the repository**
    ```bash
-   git clone [https://github.com/yourusername/auth-frontend.git](https://github.com/yourusername/auth-frontend.git)
+   git clone https://github.com/Jan23dugo/authlogin-frontend.git
+   ```

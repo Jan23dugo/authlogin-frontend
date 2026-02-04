@@ -9,7 +9,7 @@
 
 The frontend user interface for the Advanced Authentication System. It features a responsive design, protected routes, and an interactive 2FA setup wizard.
 
-🔗 Backend Repository: [Link to your Backend Repo goes here]
+🔗 Backend Repository: https://github.com/Jan23dugo/authlogin-backend.git
 
 ## Features
 
